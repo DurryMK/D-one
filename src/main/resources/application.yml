@@ -1,0 +1,30 @@
+server:
+  port: 8899
+logging:
+  level:
+    root: info
+    org: warn
+    spm.app: info
+jdbc:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+  username: root
+  password: sys123
+
+mybatis_config_file: mybatis-config.xml
+mapper_path: /mapper/**/**.xml
+entity_package: spm.app.entity
+
+spring:
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 
+    jedis: 
+      pool: 
+        max-active: 8
+        max-wait:
+        max-idle: 8
+        min-idle: 0
+        timeout: 10000ms
